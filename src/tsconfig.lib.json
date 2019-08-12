@@ -1,0 +1,16 @@
+{
+  "extends": "../tsconfig.core.json",
+  "compilerOptions": {
+    "target": "es5",
+    "noEmit": true,
+    "lib": ["dom", "es2017"]
+  },
+  "include": [
+    "Interfaces.d.ts",
+    "main/**/*.ts"
+  ],
+  "exclude": [
+    "build",
+    "node_modules"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "target": "es5",
+    "outDir": "./build_browser",
+    "declaration": true,
+    "declarationDir": "./declarations",
+    "rootDir": "./src",
+    "module": "ES2015"
+  },
+  "angularCompilerOptions": {
+    "disableTypeScriptVersionCheck": true,
+    "debug": false,
+    "skipTemplateCodegen": true,
+    "skipMetadataEmit": false,
+    "strictMetadataEmit": true
+  },
+  "files": [
+    "src/Interfaces.d.ts",
+    "src/main/index.ts",
+    "src/test/index.browser.ts"
+  ]
+}

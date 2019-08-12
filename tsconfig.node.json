@@ -1,0 +1,15 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "target": "es2015",
+    "outDir": "./build_node",
+    "rootDir": "./src",
+    "module": "commonjs"
+  },
+  "files": [
+    "src/Interfaces.d.ts",
+    "src/main/index.ts",
+    "src/test/index.node.ts",
+    "src/tools/index.ts"
+  ]
+}

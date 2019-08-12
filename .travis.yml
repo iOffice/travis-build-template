@@ -1,0 +1,34 @@
+language: node_js
+
+node_js:
+  - "8"
+  - "10"
+
+branches:
+  only:
+    - master
+
+cache: yarn
+
+env:
+  global:
+  # SLACK
+  - secure: ""
+  # NPM
+  - secure: ""
+  # GITHUB
+  - secure: ""
+
+before_install:
+  - echo "//registry.npmjs.com/:_authToken=\${NPM_TOKEN}" > .npmrc
+  - curl -o- -L https://yarnpkg.com/install.sh | bash
+  - export PATH="$HOME/.yarn/bin:$PATH"
+
+install:
+  - yarn install
+
+script:
+  - make run
+
+after_script:
+  - ioffice-travis-slack
